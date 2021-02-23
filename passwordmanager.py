@@ -8,7 +8,13 @@ age= ""
 print("Welcome to Password Manager!!")
 print("If you are 13 or older, you can store access details")
 name = input("What is your name?: ")
-age = input("How old are you?: ")
+age = int(input("How old are you?: "))
+
 print("Hello", name)
-print("Choose a mode by entering the number: ")
-print("        1: Add passwords  2:View passwords  3: Exit")
+
+if age < 12:
+  print("Sorry, you do not qualify to open an account")
+
+elif age > 12: 
+  print("Choose a mode by entering the number: ")
+  mode = input("        1: Add passwords  2:View passwords  3: Exit")  
